@@ -4,7 +4,10 @@ const app = express();
 var connection = require('./conexionBaseDatos');
 const rutas  = require('./rutas.js');
 
+//vista estatica
+app.use(express.static(__dirname+'/vitas/'))
 
+//
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({extended:true}));
 
